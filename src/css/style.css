@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(6, 0, 87);
+  background-color: rgb(226, 226, 226);
+}
+
+.hidden {
+  display: none;
+}
+
+.box {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 2%;
+  background-color: rgb(189, 178, 128);
+}
+
+.btn {
+  width: 80px;
+  height: 30px;
+  background-color: rgb(54, 194, 131);
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(29, 129, 3);
+  color: rgb(210, 245, 9);
+}
+
+.collapsible {
+  border: 2px solid rgb(67, 104, 0);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Анимация */
+.anim_start {
+  transform: translateY(0);
+}
+
+.anim_and {
+  transform: translateY(360px);
+  transition: transform 1s linear;
+}
