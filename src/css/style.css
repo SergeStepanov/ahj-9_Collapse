@@ -9,16 +9,15 @@ body {
   background-color: rgb(226, 226, 226);
 }
 
-.hidden {
-  display: none;
-}
-
 .box {
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
   margin-top: 2%;
+  padding: 15px;
   background-color: rgb(189, 178, 128);
+
+  transition: background-color 3s ease-in-out;
 }
 
 .btn {
@@ -28,26 +27,51 @@ body {
   border: none;
   border-radius: 3px;
   margin-bottom: 20px;
-  cursor: pointer;
+
+  transition-property: background-color, color, cursor;
+  transition-duration: 0.6s, 0.5s, 0.5s;
+  transition-timing-function: cubic-bezier(0.05, 0.62, 0.92, 0.37), linear,
+    linear;
+}
+
+.collapsible {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0px 10px 0 10px;
+
+  transform: scaleY(0);
+
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.05, 0.62, 0.92, 0.37);
+  transform-origin: top;
+}
+
+/* Анимация */
+.anim {
+  border: 2px solid rgb(67, 104, 0);
+  /* border-radius: 5px; */
+  padding: 10px 10px 10px 10px;
+  max-height: 100%;
+  transform: scaleY(1);
+}
+
+.box__anim {
+  background-color: rgb(251, 236, 166);
 }
 
 .btn:hover {
   background-color: rgb(29, 129, 3);
   color: rgb(210, 245, 9);
+  cursor: pointer;
 }
 
-.collapsible {
-  border: 2px solid rgb(67, 104, 0);
-  padding: 10px;
-  border-radius: 5px;
-}
-
-/* Анимация */
-.anim_start {
-  transform: translateY(0);
-}
-
-.anim_and {
-  transform: translateY(360px);
-  transition: transform 1s linear;
+/* next text */
+.copy {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 2%;
+  text-align: right;
+  overflow: hidden;
 }
